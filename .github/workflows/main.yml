@@ -22,14 +22,14 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       # Build everest-manager for ARM64
-      - name: Build and push everest-manager (ARM64)
-        uses: docker/build-push-action@v5
-        with:
-          context: ./manager
-          file: ./manager/Dockerfile
-          platforms: linux/arm64
-          push: true
-          tags: your-docker-user/everest-manager:arm64
+     # - name: Build and push everest-manager (ARM64)
+      #  uses: docker/build-push-action@v5
+      #  with:
+       #   context: ./manager
+       #   file: ./manager/Dockerfile
+       #   platforms: linux/arm64
+       #   push: true
+       #   tags: dscreations/everest-manager:arm64
 
       # Build mqtt-server for ARM64
       - name: Build and push mqtt-server (ARM64)
@@ -39,7 +39,7 @@ jobs:
           file: ./mosquitto/Dockerfile
           platforms: linux/arm64
           push: true
-          tags: your-docker-user/everest-mqtt:arm64
+          tags: dscreations/everest-mqtt:arm64
 
       # Build nodered for ARM64 (optional)
       - name: Build and push nodered (ARM64)
@@ -49,4 +49,4 @@ jobs:
           file: ./nodered/Dockerfile
           platforms: linux/arm64
           push: true
-          tags: your-docker-user/everest-nodered:arm64
+          tags: dscreations/everest-nodered:arm64
