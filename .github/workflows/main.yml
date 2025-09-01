@@ -26,7 +26,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ./manager
-          file: ./manager/Dockerfile.slim
+          file: ./manager/Dockerfile
           platforms: linux/arm64
           push: true
           tags: dscreations/everest-manager:arm64-slim
